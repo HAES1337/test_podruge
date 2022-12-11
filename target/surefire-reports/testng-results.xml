@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-12-12T00:48:33 MSK" name="TestMain" finished-at="2022-12-12T00:48:51 MSK" duration-ms="17712">
+    <groups>
+    </groups>
+    <test started-at="2022-12-12T00:48:33 MSK" name="Command line test" finished-at="2022-12-12T00:48:51 MSK" duration-ms="17712">
+      <class name="TestMain">
+        <test-method is-config="true" signature="before()[pri:0, instance:TestMain@692f203f]" started-at="2022-12-12T00:48:33 MSK" name="before" finished-at="2022-12-12T00:48:36 MSK" duration-ms="2730" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="testPodruge()[pri:0, instance:TestMain@692f203f]" started-at="2022-12-12T00:48:36 MSK" name="testPodruge" finished-at="2022-12-12T00:48:50 MSK" duration-ms="14880" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPodruge -->
+        <test-method is-config="true" signature="after()[pri:0, instance:TestMain@692f203f]" started-at="2022-12-12T00:48:50 MSK" name="after" finished-at="2022-12-12T00:48:51 MSK" duration-ms="78" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+      </class> <!-- TestMain -->
+    </test> <!-- Command line test -->
+  </suite> <!-- TestMain -->
+</testng-results>
