@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class TestMain {
+public class MainTest {
 
     private WebDriver driver;
     private WebDriverWait webDriverWait;
