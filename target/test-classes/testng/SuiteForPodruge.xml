@@ -1,8 +1,9 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="SuiteForPodruge">
-    <test name="MainTest">
+    <test name="DepartmentTests.MainTest">
         <classes>
-            <class name="MainTest"></class>
+            <class name="DepartmentTests.MainTest"/>
+            <class name="DepartmentTests.CreateDeleteDepartTest"></class>
         </classes>
     </test>
 </suite>

@@ -1,30 +1,25 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
+package DepartmentTests;
+
 import org.assertj.core.api.SoftAssertions;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
 
-public class MainTest {
+public class MainTest extends AbstractBaseTest {
 
-    private WebDriver driver;
-    private WebDriverWait webDriverWait;
+//    private WebDriver driver;
+//    private WebDriverWait webDriverWait;
     private final SoftAssertions softly = new SoftAssertions();
 
-    @BeforeMethod
-    public void before() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(5));
-    }
+//    @BeforeMethod
+//    public void before() {
+//        WebDriverManager.chromedriver().setup();
+//        driver = new ChromeDriver();
+//        driver.manage().window().maximize();
+//        webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(5));
+//    }
 
     @Test
     public void testPodruge() {
@@ -83,10 +78,10 @@ public class MainTest {
     }
 
 
-    @AfterMethod(alwaysRun = true)
-    public void after() {
-        driver.close();
-    }
+//    @AfterMethod(alwaysRun = true)
+//    public void after() {
+//        driver.close();
+//    }
 
 
 }

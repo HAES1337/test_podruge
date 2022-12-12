@@ -26,7 +26,7 @@
 
     <profiles>
         <profile>
-            <id>MainTest</id>
+            <id>DepartmentTests</id>
             <properties>
                 <maven-surefire-plugin.suiteXmlFile>${project.build.testOutputDirectory}/testng/SuiteForPodruge.xml</maven-surefire-plugin.suiteXmlFile>
             </properties>
