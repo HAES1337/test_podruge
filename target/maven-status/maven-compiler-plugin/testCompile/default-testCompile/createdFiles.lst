@@ -1,3 +1,4 @@
 DepartmentTests/MainTest.class
+DepartmentTests/ChildDepartCreateDeleteTest.class
 DepartmentTests/AbstractBaseTest.class
 DepartmentTests/CreateDeleteDepartTest.class

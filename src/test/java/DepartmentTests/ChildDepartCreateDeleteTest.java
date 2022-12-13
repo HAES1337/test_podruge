@@ -14,8 +14,10 @@ public class ChildDepartCreateDeleteTest extends  AbstractBaseTest {
     private final SoftAssertions softly = new SoftAssertions();
 //    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
+
     @Test
     public void CreateDeleteDepartmentTest() throws InterruptedException {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.navigate().to("http://develop.podruge.d1.3dev.tech/login/index.php");
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/login/index.php"));
         webDriverWait.until(ExpectedConditions.titleIs("Podruge Develop: Вход на сайт"));
@@ -48,24 +50,24 @@ public class ChildDepartCreateDeleteTest extends  AbstractBaseTest {
 //        Новое подразделение
         WebElement newDepart = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@ class='header-group__buttons']")));
         newDepart.click();
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement nameDepart = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='fitem_id_name']/div/div/div/input")));
         nameDepart.isDisplayed();
         nameDepart.click();
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //         Название родительского подразделения
         nameDepart.sendKeys("Родительское подразделение");
 //         Здесь можно сначала ввести руководителя, а потом уже подтверждать
         WebElement submit = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class,'css-8981b2')]/button[contains(text(),'Подтвердить')]")));
         submit.click();
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement selectDropdown = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//form[@id='editForm']/div/div[4]/div[2]/div/div/div/div")));
         selectDropdown.click();
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         new Actions(driver).keyDown(Keys.DOWN).sendKeys(Keys.ENTER).perform();
         submit.click();
         driver.switchTo().defaultContent();
-        Thread.sleep(3000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //        WebElement deleteDepart = driver.findElement(By.xpath("//div[@id='topofscroll']/div[2]/div/section/div/div/div/ul/li[last()]/div/div[4]/div[2]/a"));
 //        deleteDepart.click();
 //        WebElement confirmBtn = driver.findElement(By.xpath("//div[contains(@class,'css-8981b2')]/button"));
@@ -74,14 +76,14 @@ public class ChildDepartCreateDeleteTest extends  AbstractBaseTest {
         WebElement newDepartSecond = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@ class='header-group__buttons']")));
         newDepartSecond.isDisplayed();
         newDepartSecond.click();
-        Thread.sleep(1000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement nameDepartSecond = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='fitem_id_name']/div/div/div/input")));
         nameDepartSecond.isDisplayed();
         nameDepartSecond.click();
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //         Название дочернего подразделения
         nameDepartSecond.sendKeys("Дочернее подразделение");
-        Thread.sleep(2000);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement submitSecond = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class,'css-8981b2')]/button[contains(text(),'Подтвердить')]")));
         submitSecond.click();
         WebElement selectDropdownSecond = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//form[@id='editForm']/div/div[4]/div[2]/div/div/div/div")));

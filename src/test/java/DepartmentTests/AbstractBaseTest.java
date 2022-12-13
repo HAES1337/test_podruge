@@ -19,6 +19,7 @@ public abstract class AbstractBaseTest {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     @AfterMethod(alwaysRun = true)
