@@ -3,7 +3,8 @@
     <test name="DepartmentTests.MainTest">
         <classes>
             <class name="DepartmentTests.MainTest"/>
-            <class name="DepartmentTests.CreateDeleteDepartTest"></class>
+            <class name="DepartmentTests.CreateDeleteDepartTest"/>
+            <class name="DepartmentTests.ChildDepartCreateDeleteTest"/>
         </classes>
     </test>
 </suite>

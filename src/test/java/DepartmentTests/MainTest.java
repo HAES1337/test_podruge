@@ -9,17 +9,9 @@ import org.testng.annotations.Test;
 
 public class MainTest extends AbstractBaseTest {
 
-//    private WebDriver driver;
-//    private WebDriverWait webDriverWait;
+
     private final SoftAssertions softly = new SoftAssertions();
 
-//    @BeforeMethod
-//    public void before() {
-//        WebDriverManager.chromedriver().setup();
-//        driver = new ChromeDriver();
-//        driver.manage().window().maximize();
-//        webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(5));
-//    }
 
     @Test
     public void testPodruge() {
@@ -76,12 +68,6 @@ public class MainTest extends AbstractBaseTest {
         System.out.println("Данные совпадают.");
         softly.assertAll();
     }
-
-
-//    @AfterMethod(alwaysRun = true)
-//    public void after() {
-//        driver.close();
-//    }
 
 
 }
