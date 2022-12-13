@@ -23,6 +23,6 @@ public abstract class AbstractBaseTest {
 
     @AfterMethod(alwaysRun = true)
     public void after() {
-//        driver.close();
+        driver.close();
     }
 }

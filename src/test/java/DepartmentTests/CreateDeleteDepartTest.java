@@ -76,6 +76,7 @@ public class CreateDeleteDepartTest extends AbstractBaseTest {
         deleteDepart.click();
         WebElement confirmBtn = driver.findElement(By.xpath("//div[contains(@class,'css-8981b2')]/button"));
         confirmBtn.click();
+        Thread.sleep(3000);
 //        WebElement select = driver.findElement(By.xpath("//div[@role='presentation'][3]/div/ul/li[1]"));
 //        select.click();
 
