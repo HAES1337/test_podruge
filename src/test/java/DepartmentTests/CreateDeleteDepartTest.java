@@ -79,6 +79,5 @@ public class CreateDeleteDepartTest extends AbstractBaseTest {
 //        WebElement select = driver.findElement(By.xpath("//div[@role='presentation'][3]/div/ul/li[1]"));
 //        select.click();
 
-        //form[@id='editForm']/div/div[4]/div[2]/div/div/div/div
     }
 }
