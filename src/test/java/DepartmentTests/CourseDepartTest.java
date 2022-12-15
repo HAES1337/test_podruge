@@ -55,7 +55,7 @@ public class CourseDepartTest extends AbstractBaseTest {
         nameDepart.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //         Название подразделения
-        nameDepart.sendKeys("Курс-Тест подразделение");
+        nameDepart.sendKeys("Курс-Тест");
         WebElement adminName = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='fitem_id_depmanagerid']/div[2]/div/div/div/input")));
         adminName.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -66,16 +66,16 @@ public class CourseDepartTest extends AbstractBaseTest {
         submit.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //        Переход в подразделение
-        WebElement departName = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='Курс-Тест подразделение']")));
-        //div[@id='region-main-box']/section/div/div/div/ul/li[last()]/div/div
+        WebElement departName = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@class='mb-3 position-relative'][last()]/div/div/a")));
+        //a[text()='Курс-Тест']
         departName.click();
-        webDriverWait.until(ExpectedConditions.titleIs("Курс-Тест подразделение:Сотрудники"));
-        softly.assertThat(driver.getTitle()).isEqualTo("Курс-Тест подразделение:Сотрудники");
+        webDriverWait.until(ExpectedConditions.titleIs("Курс-Тест:Сотрудники"));
+        softly.assertThat(driver.getTitle()).isEqualTo("Курс-Тест:Сотрудники");
 //        Переход в вкладку курсы
         Select courses = new Select(driver.findElement(By.xpath("//select")));
         courses.selectByVisibleText("Курсы");
-        webDriverWait.until(ExpectedConditions.titleIs("Курс-Тест подразделение:Курсы"));
-        softly.assertThat(driver.getTitle()).isEqualTo("Курс-Тест подразделение:Курсы");
+        webDriverWait.until(ExpectedConditions.titleIs("Курс-Тест:Курсы"));
+        softly.assertThat(driver.getTitle()).isEqualTo("Курс-Тест:Курсы");
 //        Добавление первого курса
         WebElement courseAddBtn = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='root_app']/div/div/div/div/button")));
         courseAddBtn.click();
@@ -85,15 +85,11 @@ public class CourseDepartTest extends AbstractBaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement courseFirst = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@role='presentation']/div/ul/li")));
         courseFirst.click();
-//        Thread.sleep(2000);
-//        Actions employee =  new Actions(driver);
-//        Action seriesOfActions = employee
-//                .keyDown(Keys.ARROW_DOWN).pause(2000).sendKeys(Keys.ENTER).build();
-//        seriesOfActions.perform();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement submitBtn = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div/button[@form='addForm']")));
         submitBtn.click();
 //      Удаление первого курса
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement deleteBtn = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@aria-label='Удалить']")));
         deleteBtn.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));

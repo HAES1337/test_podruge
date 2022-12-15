@@ -1,13 +1,15 @@
 package DepartmentTests;
 
+import org.assertj.core.api.SoftAssertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
-import org.assertj.core.api.SoftAssertions;
+
 import java.time.Duration;
 
-public class EmployeeDepartTest extends AbstractBaseTest {
+public class ProgramDepartTest extends AbstractBaseTest {
     private final SoftAssertions softly = new SoftAssertions();
 
     @Test
@@ -52,67 +54,70 @@ public class EmployeeDepartTest extends AbstractBaseTest {
         nameDepart.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //         Название подразделения
-        nameDepart.sendKeys("Сотрудник-Тест");
+        nameDepart.sendKeys("Траектории-Тест");
         WebElement adminName = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='fitem_id_depmanagerid']/div[2]/div/div/div/input")));
         adminName.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        WebElement usersList= webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@role='presentation']/div/ul/li")));
+        WebElement usersList = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@role='presentation']/div/ul/li")));
         usersList.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement submit = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class,'css-8981b2')]/button[contains(text(),'Подтвердить')]")));
         submit.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//        Добавить ВСЕМ!!!
         WebElement departName = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@class='mb-3 position-relative'][last()]/div/div/a")));
-                //div[@id='region-main-box']/section/div/div/div/ul/li[last()]/div/div
         departName.click();
-        webDriverWait.until(ExpectedConditions.titleIs("Сотрудник-Тест:Сотрудники"));
-        softly.assertThat(driver.getTitle()).isEqualTo("Сотрудник-Тест:Сотрудники");
-//        Добавление первого сотрудника
+        webDriverWait.until(ExpectedConditions.titleIs("Траектории-Тест:Сотрудники"));
+        softly.assertThat(driver.getTitle()).isEqualTo("Траектории-Тест:Сотрудники");
+        Select courses = new Select(driver.findElement(By.xpath("//select")));
+        courses.selectByVisibleText("Траектории");
+        webDriverWait.until(ExpectedConditions.titleIs("Траектории-Тест:Траектории"));
+        softly.assertThat(driver.getTitle()).isEqualTo("Траектории-Тест:Траектории");
+//          Добавление первой траектории
+        WebElement programAddBtn = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='root_app']/div/div/div/div/button")));
+        programAddBtn.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        WebElement employeeAddBtn = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='root_app']/div/div/div/div/button")));
-        employeeAddBtn.click();
+        WebElement programList = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//form[@id='addForm']/div/div/div/input")));
+        programList.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        WebElement employeeList = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//form[@id='addForm']/div/div/div/input")));
-        employeeList.click();
+        WebElement programFirst = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@role='presentation']/div/ul/li")));
+        programFirst.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        WebElement employeeFirst = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@role='presentation']/div/ul/li")));
-        employeeFirst.click();
+        WebElement submitBtn = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div/button[@form='addForm']")));
+        submitBtn.click();
+//        Удаление первой траектории
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        WebElement submitAdd = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div/button[@type='submit']")));
-        submitAdd.click();
+        WebElement deleteBtn = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@aria-label='Удалить']")));
+        deleteBtn.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//        Удаление первого сотрудника
-        WebElement employeeDelete = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@aria-label='Удалить']")));
-        employeeDelete.click();
-        WebElement submitDelete = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@role='presentation']/div/div/button")));
-        submitDelete.click();
+        WebElement deleteSubmit = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@role='dialog']/div/div/button[1]")));
+        deleteSubmit.click();
+        //        НАДО УБРАТЬ ПОСЛЕ ФИКСА
+        driver.navigate().refresh();
+//        Добавляем второй курс
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//        Добавление второго сотрудника
-        WebElement employeeAddBtnSecond = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='root_app']/div/div/div/div/button")));
-        employeeAddBtnSecond.click();
+        WebElement programAddBtnSecond = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='root_app']/div/div/div/div/button")));
+        programAddBtnSecond.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//        Thread.sleep(1000);
-        WebElement employeeListSecond = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//form[@id='addForm']/div/div/div/input")));
-        employeeListSecond.click();
+        WebElement programListSecond = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//form[@id='addForm']/div/div/div/input")));
+        programListSecond.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        WebElement employeeSecond = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@role='presentation']/div/ul/li")));
-        employeeSecond.click();
+        WebElement programSecond = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@role='presentation']/div/ul/li")));
+        programSecond.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        WebElement submitAddSecond = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div/button[@type='submit']")));
-        submitAddSecond.click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//        Удаление второго сотрудника
+        WebElement submitBtnSecond = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div/button[@form='addForm']")));
+        submitBtnSecond.click();
+//      Удаляем вторую траекторию
         WebElement checkBox = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div/table/thead/tr/th/span")));
         checkBox.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement checkBoxDelete = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='root_app']/div/div/div/div[2]/button[3]")));
         checkBoxDelete.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        WebElement checkBoxDeleteSubmit = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@role='dialog']/div[2]/button[1]")));
+        WebElement checkBoxDeleteSubmit = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@role='dialog']/div/div/button[1]")));
         checkBoxDeleteSubmit.click();
+//      Удаление подразделения
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//        Thread.sleep(4000);
-//        Удаление подразделения
         WebElement departList = driver.findElement(By.xpath("//a[text()='Подразделения']"));
         departList.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -121,6 +126,7 @@ public class EmployeeDepartTest extends AbstractBaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement confirmBtn = driver.findElement(By.xpath("//div[contains(@class,'css-8981b2')]/button"));
         confirmBtn.click();
+
 
     }
 }
