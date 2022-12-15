@@ -5,6 +5,7 @@
             <class name="DepartmentTests.MainTest"/>
             <class name="DepartmentTests.CreateDeleteDepartTest"/>
             <class name="DepartmentTests.ChildDepartCreateDeleteTest"/>
+            <class name="DepartmentTests.EmployeeDepartTest"/>
         </classes>
     </test>
 </suite>

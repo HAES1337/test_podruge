@@ -16,8 +16,8 @@ public class CreateDeleteDepartTest extends AbstractBaseTest {
 
 
     @Test
-    public void CreateDeleteDepartmentTest() throws InterruptedException {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+    public void CreateDeleteDepartmentTest() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.navigate().to("http://develop.podruge.d1.3dev.tech/login/index.php");
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/login/index.php"));
         webDriverWait.until(ExpectedConditions.titleIs("Podruge Develop: Вход на сайт"));
@@ -50,31 +50,31 @@ public class CreateDeleteDepartTest extends AbstractBaseTest {
 //        WebElement newDepart = driver.findElement(By.xpath("//button[@ type='button']"));
         WebElement newDepart = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@ class='header-group__buttons']")));
         newDepart.click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement nameDepart = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='fitem_id_name']/div/div/div/input")));
         nameDepart.isDisplayed();
         nameDepart.click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //        JavascriptExecutor js1 = (JavascriptExecutor)driver;
 //        js1.executeScript("arguments[0].click();", nameDepart);
 //////        Название подразделения
         nameDepart.sendKeys("НАЗВАНИЕ");
         WebElement submit = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class,'css-8981b2')]/button[contains(text(),'Подтвердить')]")));
         submit.click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement selectDropdown = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//form[@id='editForm']/div/div[4]/div[2]/div/div/div/div")));
         selectDropdown.click();
 //        Select select = new Select(driver.findElement(By.xpath("//div[@role='presentation']")));
 //        select.selectByIndex(0);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         new Actions(driver).keyDown(Keys.DOWN).sendKeys(Keys.ENTER).perform();
         submit.click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement deleteDepart = driver.findElement(By.xpath("//div[@id='topofscroll']/div[2]/div/section/div/div/div/ul/li[last()]/div/div[4]/div[2]/a"));
         deleteDepart.click();
         WebElement confirmBtn = driver.findElement(By.xpath("//div[contains(@class,'css-8981b2')]/button"));
         confirmBtn.click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //        WebElement select = driver.findElement(By.xpath("//div[@role='presentation'][3]/div/ul/li[1]"));
 //        select.click();
 
