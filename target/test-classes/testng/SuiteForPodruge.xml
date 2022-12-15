@@ -6,6 +6,7 @@
             <class name="DepartmentTests.CreateDeleteDepartTest"/>
             <class name="DepartmentTests.ChildDepartCreateDeleteTest"/>
             <class name="DepartmentTests.EmployeeDepartTest"/>
+            <class name="DepartmentTests.CourseDepartTest"/>
         </classes>
     </test>
 </suite>

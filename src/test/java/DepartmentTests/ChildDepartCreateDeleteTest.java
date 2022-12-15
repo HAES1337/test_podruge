@@ -12,7 +12,6 @@ import java.time.Duration;
 
 public class ChildDepartCreateDeleteTest extends  AbstractBaseTest {
     private final SoftAssertions softly = new SoftAssertions();
-//    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
 
     @Test
@@ -57,16 +56,14 @@ public class ChildDepartCreateDeleteTest extends  AbstractBaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //         Название родительского подразделения
         nameDepart.sendKeys("Родительское подразделение");
-//         Здесь можно сначала ввести руководителя, а потом уже подтверждать
+        WebElement adminName = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='fitem_id_depmanagerid']/div[2]/div/div/div/input")));
+        adminName.click();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        WebElement usersList= webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@role='presentation']/div/ul/li")));
+        usersList.click();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement submit = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class,'css-8981b2')]/button[contains(text(),'Подтвердить')]")));
         submit.click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        WebElement selectDropdown = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//form[@id='editForm']/div/div[4]/div[2]/div/div/div/div")));
-        selectDropdown.click();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        new Actions(driver).keyDown(Keys.DOWN).sendKeys(Keys.ENTER).perform();
-        submit.click();
-        driver.switchTo().defaultContent();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement newDepartSecond = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@ class='header-group__buttons']")));
         newDepartSecond.isDisplayed();
@@ -78,25 +75,29 @@ public class ChildDepartCreateDeleteTest extends  AbstractBaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //         Название дочернего подразделения
         nameDepartSecond.sendKeys("Дочернее подразделение");
+        WebElement adminNameSecond = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='fitem_id_depmanagerid']/div[2]/div/div/div/input")));
+        adminNameSecond.click();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        WebElement usersListSecond= webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@role='presentation']/div/ul/li")));
+        usersListSecond.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement submitSecond = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class,'css-8981b2')]/button[contains(text(),'Подтвердить')]")));
         submitSecond.click();
-        WebElement selectDropdownSecond = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//form[@id='editForm']/div/div[4]/div[2]/div/div/div/div")));
-        selectDropdownSecond.click();
-        new Actions(driver).keyDown(Keys.DOWN).sendKeys(Keys.ENTER).perform();
-        submitSecond.click();
-        Thread.sleep(3000);
+//        Удаляем первое подразделение
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement deleteDepart = driver.findElement(By.xpath("//div[@id='topofscroll']/div[2]/div/section/div/div/div/ul/li[last()]/div/div[4]/div[2]/a"));
-                                                                    //div[@id='topofscroll']/div[2]/div/section/div/div/div/ul/li[last()]/div/div[4]/div[2]/a
         deleteDepart.click();
         WebElement confirmBtn = driver.findElement(By.xpath("//div[contains(@class,'css-8981b2')]/button"));
         confirmBtn.click();
-        Thread.sleep(3000);
-        WebElement deleteDepartSecond = driver.findElement(By.xpath("//div[@id='topofscroll']/div[2]/div/section/div/div/div/ul/li[last()]/div/div[4]/div[2]/a"));
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        Thread.sleep(2000);
+//        Удаляем второе подразделение
+        WebElement deleteDepartSecond = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='topofscroll']/div[2]/div/section/div/div/div/ul/li[last()]/div/div[4]/div[2]/a")));
         deleteDepartSecond.click();
-        WebElement confirmBtnSecond = driver.findElement(By.xpath("//div[contains(@class,'css-8981b2')]/button"));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        WebElement confirmBtnSecond = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[contains(@class,'css-8981b2')]/button")));
         confirmBtnSecond.click();
-        Thread.sleep(3000);
+
 
     }
 }
