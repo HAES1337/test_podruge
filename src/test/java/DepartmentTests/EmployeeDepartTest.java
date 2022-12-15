@@ -11,7 +11,7 @@ public class EmployeeDepartTest extends AbstractBaseTest {
     private final SoftAssertions softly = new SoftAssertions();
 
     @Test
-    public void EmployeeDepartmentTest () {
+    public void EmployeeDepartmentTest () throws InterruptedException {
 //        Переход на подружек
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.navigate().to("http://develop.podruge.d1.3dev.tech/login/index.php");
@@ -86,6 +86,7 @@ public class EmployeeDepartTest extends AbstractBaseTest {
         employeeDelete.click();
         WebElement submitDelete = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@role='presentation']/div/div/button")));
         submitDelete.click();
+        Thread.sleep(2000);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //        Добавление второго сотрудника
         WebElement employeeAddBtnSecond = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='root_app']/div/div/div/div/button")));
