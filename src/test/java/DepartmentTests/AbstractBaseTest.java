@@ -12,6 +12,8 @@ import java.time.Duration;
 public abstract class AbstractBaseTest {
     protected WebDriver driver;
     protected WebDriverWait webDriverWait;
+    protected LoginPage loginPage;
+
 
     @BeforeMethod(alwaysRun = true)
     public void before() {
@@ -20,10 +22,11 @@ public abstract class AbstractBaseTest {
         driver.manage().window().maximize();
         webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(5));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        loginPage = new LoginPage(driver);
     }
 
     @AfterMethod(alwaysRun = true)
     public void after() {
-        driver.close();
+//        driver.close();
     }
 }

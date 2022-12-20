@@ -20,14 +20,15 @@ public class EmployeeDepartTest extends AbstractBaseTest {
         softly.assertThat(driver.getTitle()).isEqualTo("Podruge Develop: Вход на сайт");
         softly.assertThat(driver.getCurrentUrl()).isEqualTo("http://develop.podruge.d1.3dev.tech/login/index.php");
 //        Авторизация
-        WebElement loginForm = driver.findElement(By.id("username"));
-        loginForm.click();
-        loginForm.sendKeys("admin");
-        WebElement passwordForm = driver.findElement(By.id("password"));
-        passwordForm.click();
-        passwordForm.sendKeys("MMca01yx!");
-        WebElement loginBtn = driver.findElement(By.id("loginbtn"));
-        loginBtn.click();
+//        WebElement loginForm = driver.findElement(By.id("username"));
+//        loginForm.click();
+//        loginForm.sendKeys("admin");
+//        WebElement passwordForm = driver.findElement(By.id("password"));
+//        passwordForm.click();
+//        passwordForm.sendKeys("MMca01yx!");
+//        WebElement loginBtn = driver.findElement(By.id("loginbtn"));
+//        loginBtn.click();
+        loginPage.login("admin","MMca01yx!");
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/my/"));
         webDriverWait.until(ExpectedConditions.titleIs("Личный кабинет"));
 //        переход в Администрирование
