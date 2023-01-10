@@ -22,14 +22,6 @@ public class ScenarioFirstTest extends AbstractBaseTest {
         softly.assertThat(driver.getTitle()).isEqualTo("Podruge Develop: Вход на сайт");
         softly.assertThat(driver.getCurrentUrl()).isEqualTo("http://develop.podruge.d1.3dev.tech/login/index.php");
 ////        Авторизация
-//        WebElement loginForm = driver.findElement(By.id("username"));
-//        loginForm.click();
-//        loginForm.sendKeys("admin");
-//        WebElement passwordForm = driver.findElement(By.id("password"));
-//        passwordForm.click();
-//        passwordForm.sendKeys("MMca01yx!");
-//        WebElement loginBtn = driver.findElement(By.id("loginbtn"));
-//        loginBtn.click();
         loginPage.login("admin","MMca01yx!");
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/my/"));
         webDriverWait.until(ExpectedConditions.titleIs("Личный кабинет"));
@@ -71,21 +63,8 @@ public class ScenarioFirstTest extends AbstractBaseTest {
         webDriverWait.until(ExpectedConditions.titleIs("Сценарий-Тест:Сотрудники"));
         softly.assertThat(driver.getTitle()).isEqualTo("Сценарий-Тест:Сотрудники");
         Thread.sleep(2000);
-//        Добавляем сотрудника
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//        WebElement employeeAddBtn = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='root_app']/div/div/div/div/button")));
-//        employeeAddBtn.click();
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//        WebElement employeeList = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//form[@id='addForm']/div/div/div/input")));
-//        employeeList.click();
-//        employeeList.sendKeys("Hanna Александр Schulz");
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//        WebElement employeeFirst = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@role='presentation']/div/ul/li")));
-//        employeeFirst.click();
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//        WebElement submitAdd = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div/button[@type='submit']")));
-//        submitAdd.click();
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
 //        Переходим на управляющего
         WebElement dropDownProfile = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[@aria-label='Меню пользователя']")));
         dropDownProfile.click();
@@ -96,20 +75,12 @@ public class ScenarioFirstTest extends AbstractBaseTest {
         webDriverWait.until(ExpectedConditions.titleIs("Podruge Develop: Вход на сайт"));
         softly.assertThat(driver.getTitle()).isEqualTo("Podruge Develop: Вход на сайт");
         softly.assertThat(driver.getCurrentUrl()).isEqualTo("http://develop.podruge.d1.3dev.tech/login/index.php");
-//        WebElement loginFormSecond = driver.findElement(By.id("username"));
-//        loginFormSecond.click();
-//        loginFormSecond.clear();
-//        loginFormSecond.sendKeys("lelal25862");
-//        WebElement passwordFormSecond = driver.findElement(By.id("password"));
-//        passwordFormSecond.click();
-//        passwordFormSecond.clear();
-//        passwordFormSecond.sendKeys("MMca01yx!");
-//        WebElement loginBtnSecond = driver.findElement(By.id("loginbtn"));
-//        loginBtnSecond.click();
         loginPage.login("lelal25862","MMca01yx!");
         driver.navigate().to("http://develop.podruge.d1.3dev.tech/my/");
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/my/"));
         webDriverWait.until(ExpectedConditions.titleIs("Личный кабинет"));
+
+
 //        Переход в управление курсами
         WebElement adminBtnSecond = driver.findElement(By.xpath("//*[text()[contains(.,'Администрирование')]]"));
         adminBtnSecond.click();
@@ -238,6 +209,7 @@ public class ScenarioFirstTest extends AbstractBaseTest {
         WebElement userTeacherSubmitSecond = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@data-region='footer']/button[2]")));
         userTeacherSubmitSecond.click();
         driver.navigate().refresh();
+
 //        Переход в управление курсами
         driver.navigate().to("http://develop.podruge.d1.3dev.tech/course/management.php");
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/course/management.php"));
@@ -254,16 +226,6 @@ public class ScenarioFirstTest extends AbstractBaseTest {
         webDriverWait.until(ExpectedConditions.titleIs("Podruge Develop: Вход на сайт"));
         softly.assertThat(driver.getTitle()).isEqualTo("Podruge Develop: Вход на сайт");
         softly.assertThat(driver.getCurrentUrl()).isEqualTo("http://develop.podruge.d1.3dev.tech/login/index.php");
-//        WebElement loginFormThird = driver.findElement(By.id("username"));
-//        loginFormThird.click();
-//        loginFormThird.clear();
-//        loginFormThird.sendKeys("admin");
-//        WebElement passwordFormThird = driver.findElement(By.id("password"));
-//        passwordFormThird.click();
-//        passwordFormThird.clear();
-//        passwordFormThird.sendKeys("MMca01yx!");
-//        WebElement loginBtnThird = driver.findElement(By.id("loginbtn"));
-//        loginBtnThird.click();
         loginPage.login("admin","MMca01yx!");
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/my/"));
         webDriverWait.until(ExpectedConditions.titleIs("Личный кабинет"));
@@ -286,7 +248,7 @@ public class ScenarioFirstTest extends AbstractBaseTest {
         WebElement programAddBtn = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='root_app']/div/div/div/div/button")));
         programAddBtn.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        WebElement programInput = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div/div[@class='py-2 w-100']/div/div/input")));
+        WebElement programInput = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div/form[@class='py-2 w-100']/div/div/input")));
         programInput.click();
         programInput.sendKeys("Траектория для сценария");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -306,7 +268,6 @@ public class ScenarioFirstTest extends AbstractBaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement programCourseInput = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//form[@id='addForm']/div/div/div/input")));
         programCourseInput.click();
-//        programCourseInput.sendKeys("Сценарий Первый Тест");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement courseList = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@role='presentation']/div/ul/li[contains(text(),'Сценарий Первый Курс')]")));
         courseList.click();
@@ -323,7 +284,6 @@ public class ScenarioFirstTest extends AbstractBaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement programCourseInputSecond = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//form[@id='addForm']/div/div/div/input")));
         programCourseInputSecond.click();
-//        programCourseInput.sendKeys("Сценарий Второй Тест");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement courseListSecond = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@role='presentation']/div/ul/li[contains(text(),'Сценарий Второй Курс')]")));
         courseListSecond.click();
@@ -356,6 +316,7 @@ public class ScenarioFirstTest extends AbstractBaseTest {
         webDriverWait.until(ExpectedConditions.titleIs("Подразделения"));
         WebElement departNameSecond = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@class='mb-3 position-relative'][last()]/div/div/a")));
         departNameSecond.click();
+
 //        Добавление сотрудника
         WebElement employeeAddBtnSecond = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='root_app']/div/div/div/div/button")));
         employeeAddBtnSecond.click();
@@ -402,14 +363,6 @@ public class ScenarioFirstTest extends AbstractBaseTest {
         webDriverWait.until(ExpectedConditions.titleIs("Podruge Develop: Вход на сайт"));
         softly.assertThat(driver.getTitle()).isEqualTo("Podruge Develop: Вход на сайт");
         softly.assertThat(driver.getCurrentUrl()).isEqualTo("http://develop.podruge.d1.3dev.tech/login/index.php");
-//        WebElement loginFormFourth = driver.findElement(By.id("username"));
-//        loginFormFourth.click();
-//        loginFormFourth.sendKeys("username63");
-//        WebElement passwordFormFourth = driver.findElement(By.id("password"));
-//        passwordFormFourth.click();
-//        passwordFormFourth.sendKeys("MMca01yx!");
-//        WebElement loginBtnFourth = driver.findElement(By.id("loginbtn"));
-//        loginBtnFourth.click();
         loginPage.login("username63","MMca01yx!");
         softly.assertThat(driver.getTitle()).isEqualTo("Личный кабинет");
         softly.assertThat(driver.getCurrentUrl()).isEqualTo("http://develop.podruge.d1.3dev.tech/my/");
@@ -423,11 +376,13 @@ public class ScenarioFirstTest extends AbstractBaseTest {
         WebElement FirstCourse = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[contains(text(),'Сценарий Первый Курс')]/..")));
         FirstCourse.click();
         softly.assertThat(driver.getTitle()).isEqualTo("Курс: Сценарий Первый Курс");
+
 //        Включаем режим редактирования, добавляем элемент
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement adminMode = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//form/div/div/input")));
         adminMode.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
 //        Элемент первого курса
         WebElement firstElement = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//li[@id='section-1']/div/button")));
         firstElement.click();
@@ -476,6 +431,7 @@ public class ScenarioFirstTest extends AbstractBaseTest {
         questionSave.click();
         softly.assertThat(driver.getTitle()).isEqualTo("Редактирование теста: Сценарный Тест");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
 //        Редактирование завершения первого курса
         WebElement backToFirstCourse = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[text()='СТ-1']")));
         backToFirstCourse.click();
@@ -498,9 +454,6 @@ public class ScenarioFirstTest extends AbstractBaseTest {
         softly.assertThat(driver.getTitle()).isEqualTo("Курс: Сценарий Первый Курс");
 
 
-
-
-
 //        Переход во второй курс
         myCourses = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//ul/li/a[contains(text(),'Мои курсы')]")));
         myCourses.click();
@@ -510,12 +463,6 @@ public class ScenarioFirstTest extends AbstractBaseTest {
         WebElement SecondCourse = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[contains(text(),'Сценарий Второй Курс')]/..")));
         SecondCourse.click();
         softly.assertThat(driver.getTitle()).isEqualTo("Курс: Сценарий Второй Курс");
-//              Включаем режим редактирования, добавляем элементы
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//        adminMode = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//form/div/div/input")));
-//        adminMode.click();
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//        Элемент второго курса
         firstElement = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//li[@id='section-1']/div/button")));
         firstElement.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -566,6 +513,7 @@ public class ScenarioFirstTest extends AbstractBaseTest {
         questionSave.click();
         softly.assertThat(driver.getTitle()).isEqualTo("Редактирование теста: Сценарный Тест");
 
+
         //        Редактирование завершения первого курса
         backToFirstCourse = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[text()='СТ-2']")));
         backToFirstCourse.click();
@@ -612,32 +560,13 @@ public class ScenarioFirstTest extends AbstractBaseTest {
         allCourses.click();
         Thread.sleep(3000);
 
-
-
 //        Проверка отображения второго курса
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-//        WebElement studentSecondCourse = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//span[contains(text(),'Сценарий Второй Курс')]/..")));
-//        WebElement studentSecondCourse = webDriverWait.until(ExpectedConditions.attributeContains(By.xpath("//span[contains(text(),'Сценарий Второй Курс')]/.."))
-//        if (studentSecondCourse.isDisplayed()){
-//            throw new IllegalArgumentException("Отображается второй курс");
-//        }
-
-//        public boolean isElementPresent (By.xpath("//span[contains(text(),'Сценарий Второй Курс')]/..")){
-//            try {
-//                driver.findElements(By.xpath("//span[contains(text(),'Сценарий Второй Курс')]/.."));
-//                return true;
-//            } catch (NoSuchElementException e){
-//                return false;
-//            }
-//        }
-
         int t = driver.findElements(By.xpath("//span[contains(text(),'Сценарий Второй Курс')]/..")).size();
         if (t>0) {
             throw new IllegalArgumentException("Отображается второй курс");
         } else {
             System.out.println("Курсы отображаются правильно");
         }
-
 
 
 //          Прохождение первого теста
@@ -663,6 +592,7 @@ public class ScenarioFirstTest extends AbstractBaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement testEndSubmit = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@value='Отправить всё и завершить тест']")));
         testEndSubmit.click();
+
 //         Переход обратно в мои курсы
         studentCourses = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//ul/li/a[contains(text(),'Мои курсы')]")));
         studentCourses.click();
@@ -805,22 +735,16 @@ public class ScenarioFirstTest extends AbstractBaseTest {
         loginPage.login("admin","MMca01yx!");
         softly.assertThat(driver.getTitle()).isEqualTo("Личный кабинет");
         softly.assertThat(driver.getCurrentUrl()).isEqualTo("http://develop.podruge.d1.3dev.tech/my/");
-
         adminBtn = driver.findElement(By.xpath("//*[text()[contains(.,'Администрирование')]]"));
         adminBtn.click();
-
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/admin/search.php"));
         webDriverWait.until(ExpectedConditions.titleIs("Podruge Develop: Управление: Поиск"));
-
         usersBtn = driver.findElement(By.xpath("//*[text()[contains(.,'Пользователи')]]"));
         usersBtn.click();
-
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/admin/search.php#linkusers"));
         webDriverWait.until(ExpectedConditions.titleIs("Podruge Develop: Управление: Поиск"));
-
         departments = driver.findElement(By.xpath("//*[text()[contains(.,'Подразделения')]]"));
         departments.click();
-
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/local/department/index.php"));
         webDriverWait.until(ExpectedConditions.titleIs("Подразделения"));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -830,21 +754,18 @@ public class ScenarioFirstTest extends AbstractBaseTest {
         WebElement confirmBtn = driver.findElement(By.xpath("//div[contains(@class,'css-8981b2')]/button"));
         confirmBtn.click();
         Thread.sleep(2000);
+
 //        Траекторию
         adminBtnThird = driver.findElement(By.xpath("//*[text()[contains(.,'Администрирование')]]"));
         adminBtnThird.click();
-
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/admin/search.php"));
         webDriverWait.until(ExpectedConditions.titleIs("Podruge Develop: Управление: Поиск"));
         coursesBtnSecond = driver.findElement(By.xpath("//*[text()[contains(.,'Курсы')]]"));
         coursesBtnSecond.click();
-
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/admin/search.php#linkcourses"));
         webDriverWait.until(ExpectedConditions.titleIs("Podruge Develop: Управление: Поиск"));
-
         programsManage = driver.findElement(By.xpath("//*[text()[contains(.,'Траектории обучения')]]"));
         programsManage.click();
-
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/local/program/programslist.php"));
         webDriverWait.until(ExpectedConditions.titleIs("Траектории обучения"));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -861,19 +782,14 @@ public class ScenarioFirstTest extends AbstractBaseTest {
 //        Курсы
         adminBtnSecond = driver.findElement(By.xpath("//*[text()[contains(.,'Администрирование')]]"));
         adminBtnSecond.click();
-
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/admin/search.php"));
         webDriverWait.until(ExpectedConditions.titleIs("Podruge Develop: Управление: Поиск"));
-
         coursesBtn = driver.findElement(By.xpath("//*[text()[contains(.,'Курсы')]]"));
         coursesBtn.click();
-
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/admin/search.php#linkcourses"));
         webDriverWait.until(ExpectedConditions.titleIs("Podruge Develop: Управление: Поиск"));
-
         CoursesManage = driver.findElement(By.xpath("//*[text()[contains(.,'Управление курсами и категориями')]]"));
         CoursesManage.click();
-
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/course/management.php"));
         webDriverWait.until(ExpectedConditions.titleIs("Управление курсами и категориями"));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -904,6 +820,7 @@ public class ScenarioFirstTest extends AbstractBaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         continueBtn = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[text()='Продолжить']")));
         continueBtn.click();
+
 
 
 
