@@ -18,8 +18,8 @@ public class MainTest extends AbstractBaseTest {
 //          Переход на подружек
         driver.navigate().to("http://develop.podruge.d1.3dev.tech/login/index.php");
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/login/index.php"));
-        webDriverWait.until(ExpectedConditions.titleIs("Podruge Develop: Вход на сайт"));
-        softly.assertThat(driver.getTitle()).isEqualTo("Podruge Develop: Вход на сайт");
+        webDriverWait.until(ExpectedConditions.titleIs("Система дистанционного обучения сети клиник «Подружки»: Вход на сайт"));
+        softly.assertThat(driver.getTitle()).isEqualTo("Система дистанционного обучения сети клиник «Подружки»: Вход на сайт");
         softly.assertThat(driver.getCurrentUrl()).isEqualTo("http://develop.podruge.d1.3dev.tech/login/index.php");
 //         Авторизация
 //        WebElement loginForm = driver.findElement(By.id("username"));
@@ -31,29 +31,29 @@ public class MainTest extends AbstractBaseTest {
 //        WebElement loginBtn = driver.findElement(By.id("loginbtn"));
 //        loginBtn.click();
         loginPage.login("admin","MMca01yx!");
-        webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/my/"));
-        webDriverWait.until(ExpectedConditions.titleIs("Личный кабинет"));
+        webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/my/courses.php"));
+        webDriverWait.until(ExpectedConditions.titleIs("Мои курсы"));
 //         переход в Администрирование
         WebElement adminBtn = driver.findElement(By.xpath("//*[text()[contains(.,'Администрирование')]]"));
         adminBtn.click();
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/admin/search.php"));
-        webDriverWait.until(ExpectedConditions.titleIs("Podruge Develop: Управление: Поиск"));
+        webDriverWait.until(ExpectedConditions.titleIs("СДО сети клиник «Подружки»: Управление: Поиск"));
 //         переход в хб Пользователи
         WebElement usersBtn = driver.findElement(By.xpath("//*[text()[contains(.,'Пользователи')]]"));
         usersBtn.click();
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/admin/search.php#linkusers"));
-        webDriverWait.until(ExpectedConditions.titleIs("Podruge Develop: Управление: Поиск"));
+        webDriverWait.until(ExpectedConditions.titleIs("СДО сети клиник «Подружки»: Управление: Поиск"));
 //         переход в Список пользователей
         WebElement usersListBtn = driver.findElement(By.xpath("//*[text()[contains(.,'Список пользователей')]]"));
         usersListBtn.click();
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/admin/user.php"));
-        webDriverWait.until(ExpectedConditions.titleIs("Podruge Develop: Управление: Пользователи: Учетные записи: Список пользователей"));
+        webDriverWait.until(ExpectedConditions.titleIs("СДО сети клиник «Подружки»: Управление: Пользователи: Учетные записи: Список пользователей"));
 //         работа по фильтру
         WebElement usersFilter = driver.findElement(By.xpath("//*[text()[contains(.,'Показать больше ...')]]"));
         usersFilter.click();
         WebElement usersFilterEmail = driver.findElement(By.id("id_email"));
         usersFilterEmail.click();
-        usersFilterEmail.sendKeys("tool_generator_000543@example.com");
+        usersFilterEmail.sendKeys("aleksandr.smirnov@podruge.ru");
         WebElement usersFilterBtn = driver.findElement(By.id("id_addfilter"));
         usersFilterBtn.click();
 //           вытаскиваем ФИО из списка

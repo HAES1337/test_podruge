@@ -13,11 +13,10 @@ public class EmployeeDepartTest extends AbstractBaseTest {
     @Test
     public void EmployeeDepartmentTest () throws InterruptedException {
 //        Переход на подружек
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.navigate().to("http://develop.podruge.d1.3dev.tech/login/index.php");
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/login/index.php"));
-        webDriverWait.until(ExpectedConditions.titleIs("Podruge Develop: Вход на сайт"));
-        softly.assertThat(driver.getTitle()).isEqualTo("Podruge Develop: Вход на сайт");
+        webDriverWait.until(ExpectedConditions.titleIs("Система дистанционного обучения сети клиник «Подружки»: Вход на сайт"));
+        softly.assertThat(driver.getTitle()).isEqualTo("Система дистанционного обучения сети клиник «Подружки»: Вход на сайт");
         softly.assertThat(driver.getCurrentUrl()).isEqualTo("http://develop.podruge.d1.3dev.tech/login/index.php");
 //        Авторизация
 //        WebElement loginForm = driver.findElement(By.id("username"));
@@ -29,17 +28,18 @@ public class EmployeeDepartTest extends AbstractBaseTest {
 //        WebElement loginBtn = driver.findElement(By.id("loginbtn"));
 //        loginBtn.click();
         loginPage.login("admin","MMca01yx!");
-        webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/my/"));
-        webDriverWait.until(ExpectedConditions.titleIs("Личный кабинет"));
+        webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/my/courses.php"));
+        webDriverWait.until(ExpectedConditions.titleIs("Мои курсы"));
 //        переход в Администрирование
         WebElement adminBtn = driver.findElement(By.xpath("//*[text()[contains(.,'Администрирование')]]"));
         adminBtn.click();
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/admin/search.php"));
-        webDriverWait.until(ExpectedConditions.titleIs("Podruge Develop: Управление: Поиск"));
+        webDriverWait.until(ExpectedConditions.titleIs("СДО сети клиник «Подружки»: Управление: Поиск"));
         WebElement usersBtn = driver.findElement(By.xpath("//*[text()[contains(.,'Пользователи')]]"));
         usersBtn.click();
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/admin/search.php#linkusers"));
-        webDriverWait.until(ExpectedConditions.titleIs("Podruge Develop: Управление: Поиск"));
+        webDriverWait.until(ExpectedConditions.titleIs("СДО сети клиник «Подружки»: Управление: Поиск"));
+//        переход в хб Подразделения
         WebElement departments = driver.findElement(By.xpath("//*[text()[contains(.,'Подразделения')]]"));
         departments.click();
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/local/department/index.php"));
