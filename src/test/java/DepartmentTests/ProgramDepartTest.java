@@ -1,5 +1,6 @@
 package DepartmentTests;
 
+import mainTest.AbstractBaseTest;
 import org.assertj.core.api.SoftAssertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

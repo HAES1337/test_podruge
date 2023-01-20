@@ -1,7 +1,11 @@
 /Users/HaesLeet/IdeaProjects/test_podruge/src/test/java/DepartmentTests/ProgramDepartTest.java
-/Users/HaesLeet/IdeaProjects/test_podruge/src/test/java/DepartmentTests/MainTest.java
+/Users/HaesLeet/IdeaProjects/test_podruge/src/test/java/mainTest/LoginPage.java
 /Users/HaesLeet/IdeaProjects/test_podruge/src/test/java/DepartmentTests/EmployeeDepartTest.java
+/Users/HaesLeet/IdeaProjects/test_podruge/src/test/java/mainTest/MainTest.java
 /Users/HaesLeet/IdeaProjects/test_podruge/src/test/java/DepartmentTests/CourseDepartTest.java
+/Users/HaesLeet/IdeaProjects/test_podruge/src/test/java/DepartmentTests/ScenarioFirstTest.java
+/Users/HaesLeet/IdeaProjects/test_podruge/src/test/java/mainTest/AbstractBaseTest.java
 /Users/HaesLeet/IdeaProjects/test_podruge/src/test/java/DepartmentTests/CreateDeleteDepartTest.java
-/Users/HaesLeet/IdeaProjects/test_podruge/src/test/java/DepartmentTests/AbstractBaseTest.java
+/Users/HaesLeet/IdeaProjects/test_podruge/src/test/java/PurposeTests/CreateDeletePurposeTest.java
 /Users/HaesLeet/IdeaProjects/test_podruge/src/test/java/DepartmentTests/ChildDepartCreateDeleteTest.java
+/Users/HaesLeet/IdeaProjects/test_podruge/src/test/java/ProgramTests/CreateDeleteProgramTest.java

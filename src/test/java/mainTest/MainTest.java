@@ -1,4 +1,4 @@
-package DepartmentTests;
+package mainTest;
 
 import org.assertj.core.api.SoftAssertions;
 import org.openqa.selenium.By;

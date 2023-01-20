@@ -1,13 +1,31 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="SuiteForPodruge">
-    <test name="DepartmentTests.MainTest">
+<suite name="SuiteForDepartmentTests">
+
+    <test name="MainTest">
         <classes>
-            <class name="DepartmentTests.MainTest"/>
+            <class name="mainTest.MainTest"/>
+        </classes>
+    </test>
+
+    <test name="DepartmentTests">
+        <classes>
             <class name="DepartmentTests.CreateDeleteDepartTest"/>
             <class name="DepartmentTests.ChildDepartCreateDeleteTest"/>
             <class name="DepartmentTests.EmployeeDepartTest"/>
             <class name="DepartmentTests.CourseDepartTest"/>
             <class name="DepartmentTests.ProgramDepartTest"/>
+        </classes>
+    </test>
+
+    <test name="ProgramTests">
+        <classes>
+            <class name="ProgramTests.CreateDeleteProgramTest"/>
+        </classes>
+    </test>
+
+    <test name="PurposeTests">
+        <classes>
+<!--            <class name="PurposeTests.CreateDeletePurposeTest"/>-->
         </classes>
     </test>
 </suite>

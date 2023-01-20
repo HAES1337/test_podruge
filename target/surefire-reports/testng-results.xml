@@ -1,81 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-15T16:42:58 MSK" name="SuiteForPodruge" finished-at="2022-12-15T16:44:44 MSK" duration-ms="105955">
+  <suite started-at="2023-01-19T13:52:58 MSK" name="SuiteForDepartmentTests" finished-at="2023-01-19T13:55:11 MSK" duration-ms="132850">
     <groups>
     </groups>
-    <test started-at="2022-12-15T16:42:58 MSK" name="DepartmentTests.MainTest" finished-at="2022-12-15T16:44:44 MSK" duration-ms="105955">
-      <class name="DepartmentTests.EmployeeDepartTest">
-        <test-method is-config="true" signature="before()[pri:0, instance:DepartmentTests.EmployeeDepartTest@3514a4c0]" started-at="2022-12-15T16:43:56 MSK" name="before" finished-at="2022-12-15T16:43:58 MSK" duration-ms="1844" status="PASS">
+    <test started-at="2023-01-19T13:52:58 MSK" name="MainTest" finished-at="2023-01-19T13:53:18 MSK" duration-ms="19432">
+      <class name="mainTest.MainTest">
+        <test-method is-config="true" signature="before()[pri:0, instance:mainTest.MainTest@223aa2f7]" started-at="2023-01-19T13:52:58 MSK" name="before" finished-at="2023-01-19T13:53:02 MSK" duration-ms="3295" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method signature="EmployeeDepartmentTest()[pri:0, instance:DepartmentTests.EmployeeDepartTest@3514a4c0]" started-at="2022-12-15T16:43:58 MSK" name="EmployeeDepartmentTest" finished-at="2022-12-15T16:44:22 MSK" duration-ms="23594" status="PASS">
+        <test-method signature="testPodruge()[pri:0, instance:mainTest.MainTest@223aa2f7]" started-at="2023-01-19T13:53:02 MSK" name="testPodruge" finished-at="2023-01-19T13:53:18 MSK" duration-ms="15972" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPodruge -->
+        <test-method is-config="true" signature="after()[pri:0, instance:mainTest.MainTest@223aa2f7]" started-at="2023-01-19T13:53:18 MSK" name="after" finished-at="2023-01-19T13:53:18 MSK" duration-ms="140" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+      </class> <!-- mainTest.MainTest -->
+    </test> <!-- MainTest -->
+    <test started-at="2023-01-19T13:53:18 MSK" name="DepartmentTests" finished-at="2023-01-19T13:54:56 MSK" duration-ms="98166">
+      <class name="DepartmentTests.EmployeeDepartTest">
+        <test-method is-config="true" signature="before()[pri:0, instance:DepartmentTests.EmployeeDepartTest@5acf93bb]" started-at="2023-01-19T13:53:51 MSK" name="before" finished-at="2023-01-19T13:53:53 MSK" duration-ms="1849" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="EmployeeDepartmentTest()[pri:0, instance:DepartmentTests.EmployeeDepartTest@5acf93bb]" started-at="2023-01-19T13:53:53 MSK" name="EmployeeDepartmentTest" finished-at="2023-01-19T13:54:12 MSK" duration-ms="19114" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EmployeeDepartmentTest -->
-        <test-method is-config="true" signature="after()[pri:0, instance:DepartmentTests.EmployeeDepartTest@3514a4c0]" started-at="2022-12-15T16:44:22 MSK" name="after" finished-at="2022-12-15T16:44:22 MSK" duration-ms="142" status="PASS">
+        <test-method is-config="true" signature="after()[pri:0, instance:DepartmentTests.EmployeeDepartTest@5acf93bb]" started-at="2023-01-19T13:54:12 MSK" name="after" finished-at="2023-01-19T13:54:12 MSK" duration-ms="153" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
       </class> <!-- DepartmentTests.EmployeeDepartTest -->
-      <class name="DepartmentTests.ChildDepartCreateDeleteTest">
-        <test-method is-config="true" signature="before()[pri:0, instance:DepartmentTests.ChildDepartCreateDeleteTest@29d89d5d]" started-at="2022-12-15T16:43:37 MSK" name="before" finished-at="2022-12-15T16:43:39 MSK" duration-ms="1783" status="PASS">
+      <class name="DepartmentTests.ProgramDepartTest">
+        <test-method is-config="true" signature="before()[pri:0, instance:DepartmentTests.ProgramDepartTest@6cd28fa7]" started-at="2023-01-19T13:54:31 MSK" name="before" finished-at="2023-01-19T13:54:33 MSK" duration-ms="1895" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method signature="CreateDeleteDepartmentTest()[pri:0, instance:DepartmentTests.ChildDepartCreateDeleteTest@29d89d5d]" started-at="2022-12-15T16:43:39 MSK" name="CreateDeleteDepartmentTest" finished-at="2022-12-15T16:43:56 MSK" duration-ms="17219" status="PASS">
+        <test-method signature="EmployeeDepartmentTest()[pri:0, instance:DepartmentTests.ProgramDepartTest@6cd28fa7]" started-at="2023-01-19T13:54:33 MSK" name="EmployeeDepartmentTest" finished-at="2023-01-19T13:54:56 MSK" duration-ms="22536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EmployeeDepartmentTest -->
+        <test-method is-config="true" signature="after()[pri:0, instance:DepartmentTests.ProgramDepartTest@6cd28fa7]" started-at="2023-01-19T13:54:56 MSK" name="after" finished-at="2023-01-19T13:54:56 MSK" duration-ms="138" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+      </class> <!-- DepartmentTests.ProgramDepartTest -->
+      <class name="DepartmentTests.ChildDepartCreateDeleteTest">
+        <test-method is-config="true" signature="before()[pri:0, instance:DepartmentTests.ChildDepartCreateDeleteTest@1a18644]" started-at="2023-01-19T13:53:34 MSK" name="before" finished-at="2023-01-19T13:53:36 MSK" duration-ms="1923" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="CreateDeleteDepartmentTest()[pri:0, instance:DepartmentTests.ChildDepartCreateDeleteTest@1a18644]" started-at="2023-01-19T13:53:36 MSK" name="CreateDeleteDepartmentTest" finished-at="2023-01-19T13:53:51 MSK" duration-ms="14738" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreateDeleteDepartmentTest -->
-        <test-method is-config="true" signature="after()[pri:0, instance:DepartmentTests.ChildDepartCreateDeleteTest@29d89d5d]" started-at="2022-12-15T16:43:56 MSK" name="after" finished-at="2022-12-15T16:43:56 MSK" duration-ms="169" status="PASS">
+        <test-method is-config="true" signature="after()[pri:0, instance:DepartmentTests.ChildDepartCreateDeleteTest@1a18644]" started-at="2023-01-19T13:53:51 MSK" name="after" finished-at="2023-01-19T13:53:51 MSK" duration-ms="139" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
       </class> <!-- DepartmentTests.ChildDepartCreateDeleteTest -->
-      <class name="DepartmentTests.MainTest">
-        <test-method is-config="true" signature="before()[pri:0, instance:DepartmentTests.MainTest@120f102b]" started-at="2022-12-15T16:42:58 MSK" name="before" finished-at="2022-12-15T16:43:02 MSK" duration-ms="3265" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- before -->
-        <test-method signature="testPodruge()[pri:0, instance:DepartmentTests.MainTest@120f102b]" started-at="2022-12-15T16:43:02 MSK" name="testPodruge" finished-at="2022-12-15T16:43:21 MSK" duration-ms="19619" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testPodruge -->
-        <test-method is-config="true" signature="after()[pri:0, instance:DepartmentTests.MainTest@120f102b]" started-at="2022-12-15T16:43:21 MSK" name="after" finished-at="2022-12-15T16:43:21 MSK" duration-ms="147" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- after -->
-      </class> <!-- DepartmentTests.MainTest -->
       <class name="DepartmentTests.CourseDepartTest">
-        <test-method is-config="true" signature="before()[pri:0, instance:DepartmentTests.CourseDepartTest@212b5695]" started-at="2022-12-15T16:44:22 MSK" name="before" finished-at="2022-12-15T16:44:24 MSK" duration-ms="1924" status="PASS">
+        <test-method is-config="true" signature="before()[pri:0, instance:DepartmentTests.CourseDepartTest@7e7be63f]" started-at="2023-01-19T13:54:12 MSK" name="before" finished-at="2023-01-19T13:54:14 MSK" duration-ms="2001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method signature="CourseDepartmentTest()[pri:0, instance:DepartmentTests.CourseDepartTest@212b5695]" started-at="2022-12-15T16:44:24 MSK" name="CourseDepartmentTest" finished-at="2022-12-15T16:44:44 MSK" duration-ms="20320" status="PASS">
+        <test-method signature="CourseDepartmentTest()[pri:0, instance:DepartmentTests.CourseDepartTest@7e7be63f]" started-at="2023-01-19T13:54:14 MSK" name="CourseDepartmentTest" finished-at="2023-01-19T13:54:31 MSK" duration-ms="17204" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CourseDepartmentTest -->
-        <test-method is-config="true" signature="after()[pri:0, instance:DepartmentTests.CourseDepartTest@212b5695]" started-at="2022-12-15T16:44:44 MSK" name="after" finished-at="2022-12-15T16:44:44 MSK" duration-ms="158" status="PASS">
+        <test-method is-config="true" signature="after()[pri:0, instance:DepartmentTests.CourseDepartTest@7e7be63f]" started-at="2023-01-19T13:54:31 MSK" name="after" finished-at="2023-01-19T13:54:31 MSK" duration-ms="151" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
       </class> <!-- DepartmentTests.CourseDepartTest -->
       <class name="DepartmentTests.CreateDeleteDepartTest">
-        <test-method is-config="true" signature="before()[pri:0, instance:DepartmentTests.CreateDeleteDepartTest@2fd1433e]" started-at="2022-12-15T16:43:21 MSK" name="before" finished-at="2022-12-15T16:43:23 MSK" duration-ms="1946" status="PASS">
+        <test-method is-config="true" signature="before()[pri:0, instance:DepartmentTests.CreateDeleteDepartTest@a530d0a]" started-at="2023-01-19T13:53:18 MSK" name="before" finished-at="2023-01-19T13:53:20 MSK" duration-ms="2049" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- before -->
-        <test-method signature="CreateDeleteDepartmentTest()[pri:0, instance:DepartmentTests.CreateDeleteDepartTest@2fd1433e]" started-at="2022-12-15T16:43:23 MSK" name="CreateDeleteDepartmentTest" finished-at="2022-12-15T16:43:37 MSK" duration-ms="13655" status="PASS">
+        <test-method signature="CreateDeleteDepartmentTest()[pri:0, instance:DepartmentTests.CreateDeleteDepartTest@a530d0a]" started-at="2023-01-19T13:53:20 MSK" name="CreateDeleteDepartmentTest" finished-at="2023-01-19T13:53:34 MSK" duration-ms="14118" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreateDeleteDepartmentTest -->
-        <test-method is-config="true" signature="after()[pri:0, instance:DepartmentTests.CreateDeleteDepartTest@2fd1433e]" started-at="2022-12-15T16:43:37 MSK" name="after" finished-at="2022-12-15T16:43:37 MSK" duration-ms="140" status="PASS">
+        <test-method is-config="true" signature="after()[pri:0, instance:DepartmentTests.CreateDeleteDepartTest@a530d0a]" started-at="2023-01-19T13:53:34 MSK" name="after" finished-at="2023-01-19T13:53:34 MSK" duration-ms="148" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
       </class> <!-- DepartmentTests.CreateDeleteDepartTest -->
-    </test> <!-- DepartmentTests.MainTest -->
-  </suite> <!-- SuiteForPodruge -->
+    </test> <!-- DepartmentTests -->
+    <test started-at="2023-01-19T13:54:56 MSK" name="ProgramTests" finished-at="2023-01-19T13:55:11 MSK" duration-ms="15196">
+      <class name="ProgramTests.CreateDeleteProgramTest">
+        <test-method is-config="true" signature="before()[pri:0, instance:ProgramTests.CreateDeleteProgramTest@543588e6]" started-at="2023-01-19T13:54:56 MSK" name="before" finished-at="2023-01-19T13:54:58 MSK" duration-ms="1915" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- before -->
+        <test-method signature="CreateDeleteProgramTest()[pri:0, instance:ProgramTests.CreateDeleteProgramTest@543588e6]" started-at="2023-01-19T13:54:58 MSK" name="CreateDeleteProgramTest" finished-at="2023-01-19T13:55:11 MSK" duration-ms="13136" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreateDeleteProgramTest -->
+        <test-method is-config="true" signature="after()[pri:0, instance:ProgramTests.CreateDeleteProgramTest@543588e6]" started-at="2023-01-19T13:55:11 MSK" name="after" finished-at="2023-01-19T13:55:11 MSK" duration-ms="143" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+      </class> <!-- ProgramTests.CreateDeleteProgramTest -->
+    </test> <!-- ProgramTests -->
+    <test started-at="2023-01-19T13:55:11 MSK" name="PurposeTests" finished-at="2023-01-19T13:55:11 MSK" duration-ms="0">
+    </test> <!-- PurposeTests -->
+  </suite> <!-- SuiteForDepartmentTests -->
 </testng-results>

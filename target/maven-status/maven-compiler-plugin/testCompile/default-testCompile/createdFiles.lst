@@ -1,4 +1,11 @@
+DepartmentTests/CourseDepartTest.class
+mainTest/LoginPage.class
+mainTest/MainTest.class
+PurposeTests/CreateDeletePurposeTest.class
+DepartmentTests/ProgramDepartTest.class
 DepartmentTests/ChildDepartCreateDeleteTest.class
-DepartmentTests/AbstractBaseTest.class
-DepartmentTests/MainTest.class
+ProgramTests/CreateDeleteProgramTest.class
+DepartmentTests/ScenarioFirstTest.class
+DepartmentTests/EmployeeDepartTest.class
+mainTest/AbstractBaseTest.class
 DepartmentTests/CreateDeleteDepartTest.class

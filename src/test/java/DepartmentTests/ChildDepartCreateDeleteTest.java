@@ -1,13 +1,13 @@
 package DepartmentTests;
+import mainTest.AbstractBaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 import org.assertj.core.api.SoftAssertions;
-
 import java.time.Duration;
 
-public class ChildDepartCreateDeleteTest extends  AbstractBaseTest {
+public class ChildDepartCreateDeleteTest extends AbstractBaseTest {
     private final SoftAssertions softly = new SoftAssertions();
 
 
@@ -18,15 +18,6 @@ public class ChildDepartCreateDeleteTest extends  AbstractBaseTest {
         webDriverWait.until(ExpectedConditions.titleIs("Система дистанционного обучения сети клиник «Подружки»: Вход на сайт"));
         softly.assertThat(driver.getTitle()).isEqualTo("Система дистанционного обучения сети клиник «Подружки»: Вход на сайт");
         softly.assertThat(driver.getCurrentUrl()).isEqualTo("http://develop.podruge.d1.3dev.tech/login/index.php");
-//         Авторизация
-//        WebElement loginForm = driver.findElement(By.id("username"));
-//        loginForm.click();
-//        loginForm.sendKeys("admin");
-//        WebElement passwordForm = driver.findElement(By.id("password"));
-//        passwordForm.click();
-//        passwordForm.sendKeys("MMca01yx!");
-//        WebElement loginBtn = driver.findElement(By.id("loginbtn"));
-//        loginBtn.click();
         loginPage.login("admin","MMca01yx!");
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/my/courses.php"));
         webDriverWait.until(ExpectedConditions.titleIs("Мои курсы"));
