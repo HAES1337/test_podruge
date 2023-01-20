@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.assertj.core.api.SoftAssertions;
 
@@ -87,7 +88,8 @@ public class CourseProgramTest extends AbstractBaseTest {
         Thread.sleep(2000);
 //        Убеждаемся, что курсы удалены
         WebElement coursesDoNotExist = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[text()='Этой траектории еще не назначены курсы']")));
-        coursesDoNotExist.getText();
+        String noCourses = coursesDoNotExist.getText();
+        Assert.assertTrue(noCourses.equals("Этой траектории еще не назначены курсы"));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 //        Переход  в список траекторий
