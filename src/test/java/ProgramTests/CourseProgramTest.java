@@ -109,7 +109,6 @@ public class CourseProgramTest extends AbstractBaseTest {
         WebElement deleteProgramSubmit = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@role='dialog']/div[2]/div/button")));
         deleteProgramSubmit.click();
 
-
     }
 
 }
