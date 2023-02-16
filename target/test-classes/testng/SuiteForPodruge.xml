@@ -19,13 +19,16 @@
 
     <test name="ProgramTests">
         <classes>
+            <class name="ProgramTests.CourseProgramTest"/>
             <class name="ProgramTests.CreateDeleteProgramTest"/>
         </classes>
     </test>
 
     <test name="PurposeTests">
         <classes>
-<!--            <class name="PurposeTests.CreateDeletePurposeTest"/>-->
+            <class name="PurposeTests.CreateDeletePurposeTest"/>
+            <class name="PurposeTests.CoursePurposeTest"/>
+            <class name="PurposeTests.ProgramPurposeTest"/>
         </classes>
     </test>
 </suite>

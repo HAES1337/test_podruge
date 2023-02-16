@@ -1,4 +1,41 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 133.358 s - in TestSuite
+Tests run: 11, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 614.986 s <<< FAILURE! - in TestSuite
+DepartmentTests.ChildDepartCreateDeleteTest.CreateDeleteDepartmentTest  Time elapsed: 36.789 s  <<< FAILURE!
+org.openqa.selenium.StaleElementReferenceException: 
+stale element reference: element is not attached to the page document
+  (Session info: chrome=109.0.5414.119)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.7.1', revision: 'c6795baf1a3'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.3', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [76f1d798dc7df85e0f8a5f33f7d94259, clickElement {id=f55da152-dadf-4657-b2e1-9521b2909bc3}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.119, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: /var/folders/j0/pf402hsd5k1...}, goog:chromeOptions: {debuggerAddress: localhost:51321}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:51321/devtoo..., se:cdpVersion: 109.0.5414.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on MAC (76f1d798dc7df85e0f8a5f33f7d94259)] -> xpath: //div[@id='topofscroll']/div[2]/div/section/div/div/div/ul/li[last()]/div/div[4]/div[2]/a]
+Session ID: 76f1d798dc7df85e0f8a5f33f7d94259
+	at DepartmentTests.ChildDepartCreateDeleteTest.CreateDeleteDepartmentTest(ChildDepartCreateDeleteTest.java:85)
+
+DepartmentTests.CourseDepartTest.CourseDepartmentTest  Time elapsed: 56.336 s  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <a href="http://develop.podruge.d1.3dev.tech/local/department/index.php">...</a> is not clickable at point (212, 109). Other element would receive the click: <div class="MuiDialog-container MuiDialog-scrollPaper css-ekeie0" role="presentation" tabindex="-1" id="yui_3_17_2_1_1674646619993_60" style="opacity: 1; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;">...</div>
+  (Session info: chrome=109.0.5414.119)
+Build info: version: '4.7.1', revision: 'c6795baf1a3'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.3', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ebc1902f5bfe57019e2f594b511dc932, clickElement {id=67eba18c-8fb9-4cdd-b6a6-e6fd788afdfb}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.119, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: /var/folders/j0/pf402hsd5k1...}, goog:chromeOptions: {debuggerAddress: localhost:51681}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:51681/devtoo..., se:cdpVersion: 109.0.5414.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on MAC (ebc1902f5bfe57019e2f594b511dc932)] -> xpath: //a[text()='Подразделения']]
+Session ID: ebc1902f5bfe57019e2f594b511dc932
+	at DepartmentTests.CourseDepartTest.CourseDepartmentTest(CourseDepartTest.java:129)
+
+PurposeTests.ProgramPurposeTest.CreatePurposeTest  Time elapsed: 68.09 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for PurposeTests.ProgramPurposeTest$$Lambda$515/0x00000008013c11f0@4425b6ed (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.7.1', revision: 'c6795baf1a3'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.3', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.119, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: /var/folders/j0/pf402hsd5k1...}, goog:chromeOptions: {debuggerAddress: localhost:53416}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:53416/devtoo..., se:cdpVersion: 109.0.5414.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4a31bc7196e52782979638cb3ddf8cf9
+	at PurposeTests.ProgramPurposeTest.CreatePurposeTest(ProgramPurposeTest.java:101)
+

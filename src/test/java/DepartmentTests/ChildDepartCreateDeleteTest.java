@@ -3,6 +3,7 @@ import mainTest.AbstractBaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import org.assertj.core.api.SoftAssertions;
 import java.time.Duration;
@@ -13,6 +14,7 @@ public class ChildDepartCreateDeleteTest extends AbstractBaseTest {
 
     @Test
     public void CreateDeleteDepartmentTest() throws InterruptedException {
+        webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(500));
         driver.navigate().to("http://develop.podruge.d1.3dev.tech/login/index.php");
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/login/index.php"));
         webDriverWait.until(ExpectedConditions.titleIs("Система дистанционного обучения сети клиник «Подружки»: Вход на сайт"));
@@ -69,19 +71,28 @@ public class ChildDepartCreateDeleteTest extends AbstractBaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement usersListSecond= webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@role='presentation']/div/ul/li")));
         usersListSecond.click();
+        WebElement childDepart = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//label[text()='Выбрать']/../div/input")));
+        childDepart.click();
+        WebElement childList = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@role='presentation']/div/ul/li[text()='Родительское подразделение']")));
+        childList.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement submitSecond = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class,'css-8981b2')]/button[contains(text(),'Подтвердить')]")));
         submitSecond.click();
+//        Развернуть дерево:
+//        Thread.sleep(3000);
+//        WebElement iconDepart = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[@class='mb-3 position-relative'][last()]/div/div/i")));
+//        iconDepart.click();
 //        Удаляем первое подразделение
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement deleteDepart = driver.findElement(By.xpath("//div[@id='topofscroll']/div[2]/div/section/div/div/div/ul/li[last()]/div/div[4]/div[2]/a"));
         deleteDepart.click();
         WebElement confirmBtn = driver.findElement(By.xpath("//div[contains(@class,'css-8981b2')]/button"));
         confirmBtn.click();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        Thread.sleep(2000);
+        Thread.sleep(5000);
 //        Удаляем второе подразделение
-        WebElement deleteDepartSecond = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id='topofscroll']/div[2]/div/section/div/div/div/ul/li[last()]/div/div[4]/div[2]/a")));
+        WebElement deleteDepartSecond = webDriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='topofscroll']/div[2]/div/section/div/div/div/ul/li[last()]/div/div[4]/div[2]/a")));
         deleteDepartSecond.click();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         WebElement confirmBtnSecond = webDriverWait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[contains(@class,'css-8981b2')]/button")));

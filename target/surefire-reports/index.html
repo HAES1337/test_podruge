@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-SuiteForDepartmentTests" class="navigator-link">
-              <span class="suite-name border-passed">SuiteForDepartmentTests</span>
+              <span class="suite-name border-failed">SuiteForDepartmentTests</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods,   7 passed</span>
+                    <span class="method-stats">11 methods, 3 failed,   8 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-SuiteForDepartmentTests" class="hide-methods failed suite-SuiteForDepartmentTests"> (hide)</a> <!-- hide-methods failed suite-SuiteForDepartmentTests -->
+                      <a href="#" panel-name="suite-SuiteForDepartmentTests" class="show-methods failed suite-SuiteForDepartmentTests"> (show)</a> <!-- show-methods failed suite-SuiteForDepartmentTests -->
+                    </span>
+                    <div class="method-list-content failed suite-SuiteForDepartmentTests">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteForDepartmentTests" title="DepartmentTests.CourseDepartTest" class="method navigator-link" hash-for-method="CourseDepartmentTest">CourseDepartmentTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteForDepartmentTests" title="DepartmentTests.ChildDepartCreateDeleteTest" class="method navigator-link" hash-for-method="CreateDeleteDepartmentTest">CreateDeleteDepartmentTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteForDepartmentTests" title="PurposeTests.ProgramPurposeTest" class="method navigator-link" hash-for-method="CreatePurposeTest">CreatePurposeTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-SuiteForDepartmentTests -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,7 +128,12 @@
                     <div class="method-list-content passed suite-SuiteForDepartmentTests">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-SuiteForDepartmentTests" title="DepartmentTests.CourseDepartTest" class="method navigator-link" hash-for-method="CourseDepartmentTest">CourseDepartmentTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-SuiteForDepartmentTests" title="ProgramTests.CourseProgramTest" class="method navigator-link" hash-for-method="CourseAddDeleteProgramTest">CourseAddDeleteProgramTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteForDepartmentTests" title="PurposeTests.CoursePurposeTest" class="method navigator-link" hash-for-method="CoursesPurposeTest">CoursesPurposeTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -114,22 +143,22 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-SuiteForDepartmentTests" title="DepartmentTests.ChildDepartCreateDeleteTest" class="method navigator-link" hash-for-method="CreateDeleteDepartmentTest">CreateDeleteDepartmentTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-SuiteForDepartmentTests" title="ProgramTests.CreateDeleteProgramTest" class="method navigator-link" hash-for-method="CreateDeleteProgramTest">CreateDeleteProgramTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-SuiteForDepartmentTests" title="DepartmentTests.ProgramDepartTest" class="method navigator-link" hash-for-method="EmployeeDepartmentTest">EmployeeDepartmentTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-SuiteForDepartmentTests" title="PurposeTests.CreateDeletePurposeTest" class="method navigator-link" hash-for-method="CreatePurposeTest">CreatePurposeTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-SuiteForDepartmentTests" title="DepartmentTests.EmployeeDepartTest" class="method navigator-link" hash-for-method="EmployeeDepartmentTest">EmployeeDepartmentTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-SuiteForDepartmentTests" title="DepartmentTests.ProgramDepartTest" class="method navigator-link" hash-for-method="EmployeeDepartmentTest">EmployeeDepartmentTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -149,6 +178,123 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-SuiteForDepartmentTests" class="panel SuiteForDepartmentTests">
+          <div class="suite-SuiteForDepartmentTests-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">DepartmentTests.CourseDepartTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CourseDepartmentTest">
+                  </a> <!-- CourseDepartmentTest -->
+                  <span class="method-name">CourseDepartmentTest</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;http://develop.podruge.d1.3dev.tech/local/department/index.php&quot;&gt;...&lt;/a&gt; is not clickable at point (212, 109). Other element would receive the click: &lt;div class=&quot;MuiDialog-container MuiDialog-scrollPaper css-ekeie0&quot; role=&quot;presentation&quot; tabindex=&quot;-1&quot; id=&quot;yui_3_17_2_1_1674646619993_60&quot; style=&quot;opacity: 1; transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=109.0.5414.119)
+Build info: version: &apos;4.7.1&apos;, revision: &apos;c6795baf1a3&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.3&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ebc1902f5bfe57019e2f594b511dc932, clickElement {id=67eba18c-8fb9-4cdd-b6a6-e6fd788afdfb}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.119, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: /var/folders/j0/pf402hsd5k1...}, goog:chromeOptions: {debuggerAddress: localhost:51681}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:51681/devtoo..., se:cdpVersion: 109.0.5414.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on MAC (ebc1902f5bfe57019e2f594b511dc932)] -&gt; xpath: //a[text()=&apos;Подразделения&apos;]]
+Session ID: ebc1902f5bfe57019e2f594b511dc932
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:551)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at DepartmentTests.CourseDepartTest.CourseDepartmentTest(CourseDepartTest.java:129)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-SuiteForDepartmentTests-class-failed -->
+          <div class="suite-SuiteForDepartmentTests-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">DepartmentTests.ChildDepartCreateDeleteTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateDeleteDepartmentTest">
+                  </a> <!-- CreateDeleteDepartmentTest -->
+                  <span class="method-name">CreateDeleteDepartmentTest</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=109.0.5414.119)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.7.1&apos;, revision: &apos;c6795baf1a3&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.3&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [76f1d798dc7df85e0f8a5f33f7d94259, clickElement {id=f55da152-dadf-4657-b2e1-9521b2909bc3}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.119, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: /var/folders/j0/pf402hsd5k1...}, goog:chromeOptions: {debuggerAddress: localhost:51321}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:51321/devtoo..., se:cdpVersion: 109.0.5414.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on MAC (76f1d798dc7df85e0f8a5f33f7d94259)] -&gt; xpath: //div[@id=&apos;topofscroll&apos;]/div[2]/div/section/div/div/div/ul/li[last()]/div/div[4]/div[2]/a]
+Session ID: 76f1d798dc7df85e0f8a5f33f7d94259
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:551)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at DepartmentTests.ChildDepartCreateDeleteTest.CreateDeleteDepartmentTest(ChildDepartCreateDeleteTest.java:85)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-SuiteForDepartmentTests-class-failed -->
+          <div class="suite-SuiteForDepartmentTests-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">PurposeTests.ProgramPurposeTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreatePurposeTest">
+                  </a> <!-- CreatePurposeTest -->
+                  <span class="method-name">CreatePurposeTest</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for PurposeTests.ProgramPurposeTest$$Lambda$515/0x00000008013c11f0@4425b6ed (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.7.1&apos;, revision: &apos;c6795baf1a3&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.3&apos;, java.version: &apos;19.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.119, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: /var/folders/j0/pf402hsd5k1...}, goog:chromeOptions: {debuggerAddress: localhost:53416}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:53416/devtoo..., se:cdpVersion: 109.0.5414.119, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4a31bc7196e52782979638cb3ddf8cf9
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at PurposeTests.ProgramPurposeTest.CreatePurposeTest(ProgramPurposeTest.java:101)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-SuiteForDepartmentTests-class-failed -->
+          <div class="suite-SuiteForDepartmentTests-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">DepartmentTests.ProgramDepartTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="EmployeeDepartmentTest">
+                  </a> <!-- EmployeeDepartmentTest -->
+                  <span class="method-name">EmployeeDepartmentTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-SuiteForDepartmentTests-class-passed -->
           <div class="suite-SuiteForDepartmentTests-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -167,14 +313,14 @@
           <div class="suite-SuiteForDepartmentTests-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">ProgramTests.CreateDeleteProgramTest</span>
+              <span class="class-name">ProgramTests.CourseProgramTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="CreateDeleteProgramTest">
-                  </a> <!-- CreateDeleteProgramTest -->
-                  <span class="method-name">CreateDeleteProgramTest</span>
+                  <a name="CourseAddDeleteProgramTest">
+                  </a> <!-- CourseAddDeleteProgramTest -->
+                  <span class="method-name">CourseAddDeleteProgramTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -197,14 +343,14 @@
           <div class="suite-SuiteForDepartmentTests-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">DepartmentTests.ChildDepartCreateDeleteTest</span>
+              <span class="class-name">PurposeTests.CoursePurposeTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="CreateDeleteDepartmentTest">
-                  </a> <!-- CreateDeleteDepartmentTest -->
-                  <span class="method-name">CreateDeleteDepartmentTest</span>
+                  <a name="CoursesPurposeTest">
+                  </a> <!-- CoursesPurposeTest -->
+                  <span class="method-name">CoursesPurposeTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -227,14 +373,14 @@
           <div class="suite-SuiteForDepartmentTests-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">DepartmentTests.ProgramDepartTest</span>
+              <span class="class-name">ProgramTests.CreateDeleteProgramTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="EmployeeDepartmentTest">
-                  </a> <!-- EmployeeDepartmentTest -->
-                  <span class="method-name">EmployeeDepartmentTest</span>
+                  <a name="CreateDeleteProgramTest">
+                  </a> <!-- CreateDeleteProgramTest -->
+                  <span class="method-name">CreateDeleteProgramTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -242,14 +388,14 @@
           <div class="suite-SuiteForDepartmentTests-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">DepartmentTests.CourseDepartTest</span>
+              <span class="class-name">PurposeTests.CreateDeletePurposeTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="CourseDepartmentTest">
-                  </a> <!-- CourseDepartmentTest -->
-                  <span class="method-name">CourseDepartmentTest</span>
+                  <a name="CreatePurposeTest">
+                  </a> <!-- CreatePurposeTest -->
+                  <span class="method-name">CreatePurposeTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -280,10 +426,16 @@
   &lt;/test&gt; &lt;!-- DepartmentTests --&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;ProgramTests&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;ProgramTests.CourseProgramTest&quot;/&gt;
       &lt;class name=&quot;ProgramTests.CreateDeleteProgramTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- ProgramTests --&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;PurposeTests&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;PurposeTests.CreateDeletePurposeTest&quot;/&gt;
+      &lt;class name=&quot;PurposeTests.CoursePurposeTest&quot;/&gt;
+      &lt;class name=&quot;PurposeTests.ProgramPurposeTest&quot;/&gt;
+    &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- PurposeTests --&gt;
 &lt;/suite&gt; &lt;!-- SuiteForDepartmentTests --&gt;
             </pre>
@@ -302,10 +454,10 @@
                 <span class="test-name">DepartmentTests (5 classes)</span>
               </li>
               <li>
-                <span class="test-name">ProgramTests (1 class)</span>
+                <span class="test-name">ProgramTests (2 classes)</span>
               </li>
               <li>
-                <span class="test-name">PurposeTests (0 classes)</span>
+                <span class="test-name">PurposeTests (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -331,40 +483,56 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(7);
+data.addRows(11);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'EmployeeDepartmentTest')
-data.setCell(0, 2, 'DepartmentTests.ProgramDepartTest')
-data.setCell(0, 3, 22536);
+data.setCell(0, 1, 'CoursesPurposeTest')
+data.setCell(0, 2, 'PurposeTests.CoursePurposeTest')
+data.setCell(0, 3, 169496);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'EmployeeDepartmentTest')
-data.setCell(1, 2, 'DepartmentTests.EmployeeDepartTest')
-data.setCell(1, 3, 19114);
+data.setCell(1, 1, 'CreatePurposeTest')
+data.setCell(1, 2, 'PurposeTests.ProgramPurposeTest')
+data.setCell(1, 3, 68094);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'CourseDepartmentTest')
 data.setCell(2, 2, 'DepartmentTests.CourseDepartTest')
-data.setCell(2, 3, 17204);
+data.setCell(2, 3, 56337);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'testPodruge')
 data.setCell(3, 2, 'mainTest.MainTest')
-data.setCell(3, 3, 15972);
+data.setCell(3, 3, 48937);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'CreateDeleteDepartmentTest')
-data.setCell(4, 2, 'DepartmentTests.ChildDepartCreateDeleteTest')
-data.setCell(4, 3, 14738);
+data.setCell(4, 1, 'EmployeeDepartmentTest')
+data.setCell(4, 2, 'DepartmentTests.ProgramDepartTest')
+data.setCell(4, 3, 45003);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'CreateDeleteDepartmentTest')
-data.setCell(5, 2, 'DepartmentTests.CreateDeleteDepartTest')
-data.setCell(5, 3, 14118);
+data.setCell(5, 1, 'CourseAddDeleteProgramTest')
+data.setCell(5, 2, 'ProgramTests.CourseProgramTest')
+data.setCell(5, 3, 42398);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'CreateDeleteProgramTest')
-data.setCell(6, 2, 'ProgramTests.CreateDeleteProgramTest')
-data.setCell(6, 3, 13136);
+data.setCell(6, 1, 'CreateDeleteDepartmentTest')
+data.setCell(6, 2, 'DepartmentTests.ChildDepartCreateDeleteTest')
+data.setCell(6, 3, 36803);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'EmployeeDepartmentTest')
+data.setCell(7, 2, 'DepartmentTests.EmployeeDepartTest')
+data.setCell(7, 3, 36676);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'CreatePurposeTest')
+data.setCell(8, 2, 'PurposeTests.CreateDeletePurposeTest')
+data.setCell(8, 3, 31163);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'CreateDeleteProgramTest')
+data.setCell(9, 2, 'ProgramTests.CreateDeleteProgramTest')
+data.setCell(9, 3, 24538);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'CreateDeleteDepartmentTest')
+data.setCell(10, 2, 'DepartmentTests.CreateDeleteDepartTest')
+data.setCell(10, 3, 22831);
 window.suiteTableData['SuiteForDepartmentTests']= { tableData: data, tableDiv: 'times-div-SuiteForDepartmentTests'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 9 minutes</span>
               <div id="times-div-SuiteForDepartmentTests">
               </div> <!-- times-div-SuiteForDepartmentTests -->
             </div> <!-- times-div -->
@@ -397,101 +565,173 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testPodruge</span>
-                <span class="method-start">3295 ms</span>
+                <span class="method-start">4211 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">after</span>
-                <span class="method-start">19268 ms</span>
+                <span class="method-start">53149 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">DepartmentTests.CreateDeleteDepartTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">before</span>
-                <span class="method-start">19438 ms</span>
+                <span class="method-start">53218 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">CreateDeleteDepartmentTest</span>
-                <span class="method-start">21487 ms</span>
+                <span class="method-start">55536 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">after</span>
-                <span class="method-start">35605 ms</span>
+                <span class="method-start">78367 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">DepartmentTests.ChildDepartCreateDeleteTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">before</span>
-                <span class="method-start">35754 ms</span>
+                <span class="method-start">78369 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">CreateDeleteDepartmentTest</span>
-                <span class="method-start">37678 ms</span>
+                <span class="method-start">80589 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">after</span>
-                <span class="method-start">52416 ms</span>
+                <span class="method-start">117397 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">DepartmentTests.EmployeeDepartTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">before</span>
-                <span class="method-start">52556 ms</span>
+                <span class="method-start">117398 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">EmployeeDepartmentTest</span>
-                <span class="method-start">54405 ms</span>
+                <span class="method-start">119392 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">after</span>
-                <span class="method-start">73520 ms</span>
+                <span class="method-start">156069 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">DepartmentTests.CourseDepartTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">before</span>
-                <span class="method-start">73673 ms</span>
+                <span class="method-start">156070 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">CourseDepartmentTest</span>
-                <span class="method-start">75674 ms</span>
+                <span class="method-start">158445 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">after</span>
-                <span class="method-start">92879 ms</span>
-              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">DepartmentTests.ProgramDepartTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">before</span>
-                <span class="method-start">93031 ms</span>
+                <span class="method-start">214783 ms</span>
               </div> <!-- configuration-method before -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">DepartmentTests.CourseDepartTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">after</span>
+                <span class="method-start">214783 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">DepartmentTests.ProgramDepartTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">EmployeeDepartmentTest</span>
-                <span class="method-start">94926 ms</span>
+                <span class="method-start">216983 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">after</span>
-                <span class="method-start">117463 ms</span>
+                <span class="method-start">261987 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">ProgramTests.CourseProgramTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">before</span>
+                <span class="method-start">262039 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CourseAddDeleteProgramTest</span>
+                <span class="method-start">264431 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">after</span>
+                <span class="method-start">306830 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">ProgramTests.CreateDeleteProgramTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">before</span>
-                <span class="method-start">117628 ms</span>
+                <span class="method-start">306831 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">CreateDeleteProgramTest</span>
-                <span class="method-start">119543 ms</span>
+                <span class="method-start">308931 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">after</span>
-                <span class="method-start">132680 ms</span>
+                <span class="method-start">333469 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">PurposeTests.CreateDeletePurposeTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">before</span>
+                <span class="method-start">333681 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CreatePurposeTest</span>
+                <span class="method-start">336071 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">after</span>
+                <span class="method-start">367235 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">PurposeTests.CoursePurposeTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">before</span>
+                <span class="method-start">367235 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CoursesPurposeTest</span>
+                <span class="method-start">369482 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">after</span>
+                <span class="method-start">538978 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">PurposeTests.ProgramPurposeTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">before</span>
+                <span class="method-start">538979 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">CreatePurposeTest</span>
+                <span class="method-start">541227 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">after</span>
+                <span class="method-start">609322 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

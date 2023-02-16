@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.assertj.core.api.SoftAssertions;
@@ -13,9 +14,11 @@ import java.time.Duration;
 
 public class ProgramPurposeTest extends AbstractBaseTest {
     private final SoftAssertions softly = new SoftAssertions();
+//    WebDriverWait webDriverWait;
 
     @Test
     public void CreatePurposeTest() throws InterruptedException {
+        webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(500));
         driver.navigate().to("http://develop.podruge.d1.3dev.tech/login/index.php");
         webDriverWait.until(ExpectedConditions.urlToBe("http://develop.podruge.d1.3dev.tech/login/index.php"));
         webDriverWait.until(ExpectedConditions.titleIs("Система дистанционного обучения сети клиник «Подружки»: Вход на сайт"));
@@ -124,6 +127,7 @@ public class ProgramPurposeTest extends AbstractBaseTest {
         WebElement programsList = driver.findElement(By.xpath("//a[text()='Смешанные назначения']"));
         programsList.click();
         softly.assertThat(driver.getTitle()).isEqualTo("Смешанные назначения");
+
 
 
 
